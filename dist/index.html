@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MK II Rush</title>
+    <link rel="stylesheet" href="styles/mk2Font.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/sco/b/b1/Mortal_Kombat_Logo.svg"
+      type="svg"
+    />
+  </head>
+  <body>
+    <div id="new-game">
+      <h1>CHOOSE YOUR DESTINY</h1>
+      <h2>ROWS</h2>
+      <input placeholder="#" type="number" id="rows" />
+      <h2>COLUMNS</h2>
+      <input placeholder="#" type="number" id="columns" />
+      <button id="start-btn" style="display: grid ">
+        <img
+          style="width: 250px"
+          src="https://upload.wikimedia.org/wikipedia/sco/b/b1/Mortal_Kombat_Logo.svg"
+          alt="start"
+        />
+        <span>START</span>
+      </button>
+    </div>
+
+    <div id="end-game">
+      <div id="winner"></div>
+      <img
+        src="https://64.media.tumblr.com/e0c55fc60b703206f5b50d61f08c66d1/tumblr_mgj1s8HP4A1rvbjw7o1_500.gif"
+        alt=""
+      />
+      <button id="play-again-btn">PLAY AGAIN?</button>
+    </div>
+
+    <div id="board-container"></div>
+
+    <div id="scores-container"></div>
+
+    <!-- BOARD-TEMPLATE -->
+    <script id="board-template" type="text/x-handlebars-template">
+      {{#each this}}
+        <div class='row'>
+          {{#each this}}
+            <div class='box {{this}}'>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </script>
+
+    <!-- SCORES-TEMPLATE -->
+    <script id="scores-template" type="text/x-handlebars-template">
+      {{#each this}}
+        <div id={{this.icon}} class='player'>
+          <div class='plyer-name'>
+            <h3>
+              {{this.icon}}
+            </h3>
+          </div>
+          <div class='player-score'>
+            <h3>
+              Score: {{this.score}}
+            </h3>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

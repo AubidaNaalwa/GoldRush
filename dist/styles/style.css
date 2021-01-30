@@ -1,0 +1,158 @@
+:root {
+  --main-color: #c0392b;
+  --player1-color: #3498db;
+  --player2-color: #f1c40f;
+  --background-color: #73726d;
+  --shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mortal Kombat 2';
+}
+
+body {
+  background-color: #2d2f31;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#board-container {
+  width: 90%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin: 10px;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#scores-container {
+  background-color: var(--background-color);
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+#p1 {
+  color: var(--player1-color);
+}
+#p2 {
+  color: var(--player2-color);
+}
+
+.C {
+  background-color: var(--main-color);
+  background-image: url(https://iconape.com/wp-content/files/nb/247541/png/mortal-combat-logo.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.W {
+  background-color: var(--background-color);
+  background-image: url(https://image.flaticon.com/icons/svg/844/844978.svg);
+}
+
+.p1 {
+  background-color: var(--player1-color);
+  background-image: url(https://icons.iconarchive.com/icons/iconshock/mortal-kombat/128/mortal-kombat-2-icon.png);
+  background-image: url(https://vignette.wikia.nocookie.net/mkwikia/images/3/3c/Subzero-mk2-fix.gif/revision/latest?cb=20171230230014);
+  background-size: cover;
+}
+
+.p2 {
+  background-color: var(--player2-color);
+  background-image: url(https://vignette.wikia.nocookie.net/mkwikia/images/f/f3/Scorpion-mk2-fix1.gif/revision/latest?cb=20081004200429);
+  background-size: cover;
+  transform: scaleX(-1);
+}
+
+.e {
+  background-color: var(--background-color);
+}
+
+#new-game {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: var(--main-color);
+  background-image: url(../assets/cover.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#new-game input {
+  outline: none;
+  background-image: linear-gradient(#f1c40f, var(--main-color));
+  height: 100%;
+  font-size: xx-large;
+  text-align: center;
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+#start-btn {
+  outline: none;
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+#end-game {
+  width: 500px;
+  height: 500px;
+  z-index: 5;
+  display: grid;
+}
+
+#winner {
+  color: var(--main-color);
+  font-size: 80px;
+  text-align: center;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+#play-again-btn {
+  outline: none;
+  font-size: xx-large;
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: var(--shadow);
+}
